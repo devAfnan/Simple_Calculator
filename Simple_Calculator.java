@@ -6,39 +6,37 @@ import java.util.Scanner;
 public class Simple_Calculator {
     public static void main(String[] args) {
 
-        double num1, num2;
         Scanner sc = new Scanner(System.in);
 	System.out.println("Enter the numbers:");
 
-		num1 = sc.nextDouble();
-		num2 = sc.nextDouble();
+	  double num1 = sc.nextDouble();
+	  double num2 = sc.nextDouble();
 
-		System.out.println("Enter the operator (+,-,*,/):");
-		char op = sc.next().charAt(0);
-		double res = 0;
+		System.out.println("Choose an operator (+,-,*,/):");
+		char operator = sc.next().charAt(0);
+		double result = 0;
 
-		switch (op) {
+		switch (operator) {
 		case '+':
-		  res = num1 + num2;
+		  result = num1 + num2;
 			break;
 
 		case '-':
-		  res = num1 - num2;
+		  result = num1 - num2;
 			break;
 
 		case '*':
-		  res = num1 * num2;
+		  result = num1 * num2;
 			break;
 
 		case '/':
-		  res = num1 / num2;
+		  result = num1 / num2;
 			break;
 
 		default:
-		  System.out.println("You entered the wrong input");
+		  System.out.println("Invalid operator!");
 		}
 
-	System.out.println("The final result: ");
-	System.out.println(num1 + " " + op + " " + num2 + " = " + res);
+	System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
     }
 }
